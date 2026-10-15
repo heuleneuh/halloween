@@ -1,0 +1,54 @@
+body {
+ body {
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(180deg, #1a1a2e 0%, #0d0d1a 100%);
+            overflow: hidden; /* Pas de scrollbars avec la traînée */
+            cursor: none; /* On cache le curseur classique ! */
+        }
+
+        /* Le fantôme qui suit la souris */
+        .ghost {
+            position: fixed;
+            font-size: 2rem;
+            pointer-events: none; /* Le fantôme ne bloque pas les clics */
+            transform: translate(-50%, -50%); /* Centre le fantôme sur le curseur */
+            z-index: 1000;
+            user-select: none;
+        }
+
+        /* Chaque toile d'araignée de la traînée */
+        .trail {
+            position: fixed;
+            font-size: 1rem;
+            pointer-events: none;
+            transform: translate(-50%, -50%);
+            animation: fadeOut 1s forwards; /* L'animation gère la disparition */
+            user-select: none;
+        }
+
+        /* L'animation de disparition progressive */
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1) rotate(0deg);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.3) rotate(45deg);
+            }
+        }
+
+        /* Petit texte d'ambiance au centre */
+        .hint {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgba(255, 255, 255, 0.3);
+            font-family: sans-serif;
+            font-size: 1.5rem;
+            text-align: center;
+            pointer-events: none;
+        }
+}
