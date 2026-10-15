@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="stylesheet" src="styles.css">
+    <title>Day 4: Le Curseur Fantôme</title>
+</head>
+<body>
+     <div class="hint">🕸️ Bougez la souris... 🕸️</div>
+    <div class="ghost" id="ghost">👻</div>
+</body>
+</html>
